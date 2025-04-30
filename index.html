@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servientrega Valle del Lili | Envíos, Pagos Bancolombia y SOAT - Sur de Cali</title>
+    <meta name="description" content="Lucelly Miscelánea - Tu punto Servientrega en Valle del Lili. Envía paquetes, paga SOAT, servicios Bancolombia, Efecty y compra en miscelánea. Horarios de atención actualizados.">
+    
+    <!-- Schema Markup LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Lucelly Miscelánea | Servientrega",
+        "legalName": "Lucelly Miscelánea",
+        "image": "",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Cl 48 Bis #92 -11",
+            "addressLocality": "Cali",
+            "addressRegion": "Valle del Cauca",
+            "postalCode": "760017",
+            "addressCountry": "CO"
+        },
+        "telephone": "+573052710041",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "15:00"
+            }
+        ],
+        "priceRange": "$$"
+    }
+    </script>
+
+    <style>
+        /* RESET + ESTILOS BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        :root {
+            --azul-servientrega: #004B8D;
+            --amarillo-cta: #FFD100;
+            --gris-fondo: #F5F5F5;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* HEADER */
+        .header {
+            background: var(--azul-servientrega);
+            padding: 1.5rem 1rem;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            margin: 0.5rem 0;
+        }
+
+        .marca-local {
+            font-size: 1.4rem;
+            color: var(--amarillo-cta);
+            display: block;
+            font-weight: bold;
+        }
+
+        /* CARRUSEL 9:16 */
+        .carrusel-contenedor {
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            background: black; /* Fondo para bordes en móvil */
+        }
+
+        .carrusel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            animation: carrusel-auto 28s infinite;
+            height: 85vh; /* Altura adaptativa para formato vertical */
+        }
+
+        .carrusel img {
+            width: 100%;
+            min-width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        @keyframes carrusel-auto {
+            0%, 12% { transform: translateX(0); }
+            14%, 26% { transform: translateX(-100%); }
+            28%, 40% { transform: translateX(-200%); }
+            42%, 54% { transform: translateX(-300%); }
+            56%, 68% { transform: translateX(-400%); }
+            70%, 82% { transform: translateX(-500%); }
+            84%, 96% { transform: translateX(-600%); }
+            98%, 100% { transform: translateX(0); }
+        }
+
+        /* SECCIÓN SERVICIOS */
+        .servicios {
+            padding: 2rem 1rem;
+            background: var(--gris-fondo);
+        }
+
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .servicio-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .servicio-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* HORARIO */
+        .horario {
+            background: white;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .grid-horario {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .dia {
+            font-weight: bold;
+            color: var(--azul-servientrega);
+        }
+
+        /* MAPA */
+        .mapa {
+            padding: 2rem 1rem;
+            background: white;
+        }
+
+        .mapa h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--azul-servientrega);
+        }
+
+        .mapa iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* LOGOS SOCIOS */
+        .logos-socios {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+            padding: 0 1rem;
+        }
+
+        .logos-socios img {
+            height: 40px;
+            width: auto;
+            filter: grayscale(30%);
+            transition: filter 0.3s;
+        }
+
+        .logos-socios img:hover {
+            filter: grayscale(0%);
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--azul-servientrega);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        .footer p {
+            margin: 0.5rem 0;
+        }
+
+        /* CTA FLOTANTE */
+        .cta-flotante {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--amarillo-cta);
+            color: #333;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            z-index: 1000;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s;
+        }
+
+        .cta-flotante:hover {
+            transform: scale(1.05);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .carrusel {
+                height: 70vh; /* Ajuste para móviles */
+            }
+
+            .servicios-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mapa iframe {
+                height: 300px;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .marca-local {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carrusel {
+                height: 60vh;
+            }
+
+            .grid-horario {
+                grid-template-columns: 1fr;
+            }
+
+            .dia {
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <span class="marca-local">Lucelly Miscelánea</span>
+        <h1>Punto Servientrega Valle del Lili</h1>
+        <p>Envíos, pagos y miscelánea en Sur de Cali</p>
+    </header>
+
+
+    <div class="carrusel-contenedor">
+        <div class="carrusel">
+            <!-- IMÁGENES EN FORMATO 9:16 (1080x1920 recomendado) -->
+            <img src="carrusel-1.jpg" alt="Fachada de Lucelly Miscelánea - Punto Servientrega en Valle del Lili">
+            <img src="carrusel-2.jpg" alt="Interior del local mostrando área de envíos y paquetería">
+            <img src="carrusel-3.jpg" alt="Mostrador de pagos SOAT y servicios Bancolombia">
+            <img src="carrusel-4.jpg" alt="Sección de miscelánea con productos básicos">
+            <img src="carrusel-5.jpg" alt="Personal atendiendo envíos Servientrega">
+            <img src="carrusel-6.jpg" alt="Cartel de servicios Efecty y recaudos">
+            <img src="carrusel-7.jpg" alt="Vista nocturna del local iluminado">
+        </div>
+    </div>
+
+    <section class="servicios">
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <h2>Envíos Nacionales</h2>
+                <p>Envía paquetes a todo Colombia desde el Valle del Lili con tarifas competitivas</p>
+            </div>
+            <div class="servicio-card">
+                <h2>Pagos SOAT</h2>
+                <p>Renovación rápida de SOAT sin filas y asesoría personalizada</p>
+            </div>
+            <div class="servicio-card">
+                <h2>Recaudos Bancolombia</h2>
+                <p>Paga facturas, servicios públicos y realiza recargas</p>
+            </div>
+            <div class="servicio-card">
+                <h2>Miscelánea</h2>
+                <p>Productos básicos, ropa y artículos de primera necesidad</p>
+            </div>
+        </div>
+    </section>
+    <section class="horario">
+        <h2>Horario de Atención</h2>
+        <div class="grid-horario">
+            <div class="dia">Lunes a Viernes</div>
+            <div>9 a. m. a 6 p. m.</div>
+            
+            <div class="dia">Sábado</div>
+            <div>9 a. m. a 3 p. m.</div>
+            
+            <div class="dia">Domingo</div>
+            <div>Cerrado</div>
+        </div>
+    </section>
+    <div class="logos-socios">
+        <!-- LOGOS CON TAMAÑOS OPTIMIZADOS -->
+        <img src="logo-servientrega.png" alt="Logo Oficial Servientrega" width="150">
+        <img src="logo-bancolombia.png" alt="Logo Bancolombia" width="120">
+        <img src="logo-efecty.png" alt="Logo Efecty" width="100">
+        <img src="logo-soat.png" alt="Logo SOAT" width="80">
+    </div>
+
+    <section class="mapa">
+        <h2>Ubicación en Valle del Lili</h2>
+        <div class="mapa-contenedor">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7965.785674646014!2d-76.52472499808957!3d3.376361542035071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a12d747a9121%3A0xbfa807ddcb502e57!2sLucelly%20Miscel%C3%A1nea%20%7C%20Servientrega!5e0!3m2!1ses!2sco!4v1746018801913!5m2!1ses!2sco" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>📍 <strong>Lucelly Miscelánea</strong> - Cl 48 Bis #92 -11, Comuna 17, Valle del Lili, Cali</p>
+        <p>📞 305 2710041 | ⏰ Lunes-Viernes 9AM - 6PM | Sábados 9AM - 3PM</p>
+        <p>© 2025 CUSIG SAS - Todos los derechos reservados</p>
+    </footer>
+
+    <a href="https://wa.me/573052710041" class="cta-flotante" aria-label="Contactar por WhatsApp">
+        WhatsApp 📲
+    </a>
+</body>
+</html>
